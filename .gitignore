@@ -11,7 +11,7 @@ dashboard/.next/
 dashboard/.next-build/
 dashboard/node_modules/
 workspace/agent-tasks/
-
+remotion/*
 # Tool caches
 __pycache__/
 *.pyc
