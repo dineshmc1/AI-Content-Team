@@ -7,6 +7,10 @@ research/
 output/
 .work/
 remotion/public/jobs/
+dashboard/.next/
+dashboard/.next-build/
+dashboard/node_modules/
+workspace/agent-tasks/
 
 # Tool caches
 __pycache__/

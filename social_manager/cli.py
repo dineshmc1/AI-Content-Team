@@ -43,6 +43,7 @@ from .intelligence import (
     register_draft,
     write_analysis_artifacts,
 )
+from .agency.store import AgencyStore
 
 
 def _parse_date(value: str | None) -> date:
@@ -51,6 +52,12 @@ def _parse_date(value: str | None) -> date:
 
 def _intelligence_store(database: Path | None) -> LocalKnowledgeStore:
     store = LocalKnowledgeStore(database or DEFAULT_DATABASE)
+    store.initialize()
+    return store
+
+
+def _agency_store(database: Path | None) -> AgencyStore:
+    store = AgencyStore(database or DEFAULT_DATABASE)
     store.initialize()
     return store
 
@@ -356,6 +363,10 @@ def main() -> None:
     metric_parser.add_argument("--value", required=True, type=float)
     metric_parser.add_argument("--collected-on", help="YYYY-MM-DD; defaults to today")
     metric_parser.add_argument("--database", type=Path)
+
+    agency_run_parser = subparsers.add_parser("agency-run", help="Create/resume today's scheduled local agency workflow and prepare valid Desktop handoffs")
+    agency_run_parser.add_argument("--date", help="Run date in YYYY-MM-DD (defaults to today)")
+    agency_run_parser.add_argument("--database", type=Path)
     args = parser.parse_args()
     try:
         if args.command == "validate":
@@ -427,6 +438,11 @@ def main() -> None:
             store = _intelligence_store(args.database)
             store.record_metric_by_external_id(args.platform, args.external_id, args.metric, args.value, collected_on=args.collected_on)
             print(f"METRIC RECORDED: {args.metric} for {args.platform}:{args.external_id}")
+            return
+        if args.command == "agency-run":
+            run_date = _parse_date(args.date).isoformat()
+            result = _agency_store(args.database).run_scheduled_workflow(run_date)
+            print(f"AGENCY RUN: {json.dumps(result)}")
             return
         quality = "preview" if args.command == "preview" else "full"
         output = produce(args.storyboard, _parse_date(args.date), args.overwrite, quality, args.command == "package", args.narration_wav, args.narration_voice_name)

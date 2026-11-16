@@ -143,6 +143,42 @@ For a metric that is not exposed by a sync, add it locally to an already tracked
 python -m social_manager record-metric --platform youtube --external-id PLATFORM_VIDEO_ID --metric views --value 12000
 ```
 
+## Local agency control room
+
+The project now also includes an in-progress local agency dashboard, FastAPI
+backend, durable task/event store, content calendar, and ChatGPT Desktop task
+exchange. It uses no OpenAI API key. Install dashboard dependencies once:
+
+```powershell
+cd dashboard
+npm install
+cd ..
+```
+
+Run a local environment diagnostic, then start the dashboard and API:
+
+```powershell
+.\scripts\doctor.ps1 -Database data\live.sqlite3
+.\scripts\start-agency.ps1 -Database data\live.sqlite3
+```
+
+Open `http://localhost:3000`. The backend is restricted to
+`http://127.0.0.1:8000`.
+
+For the current one-command daily planner:
+
+```powershell
+.\agency.ps1 -Database data\live.sqlite3
+```
+
+It initializes the local intelligence store, starts the local control room,
+and creates/reuses dependency-safe workflows for content that is actually
+scheduled for today. It writes the next eligible creative task to
+`workspace/agent-tasks/<task-id>/` for ChatGPT Desktop. A task remains visibly
+waiting until `output/output.json` is imported and validates; the launcher does
+not claim it can automate arbitrary ChatGPT Desktop conversations. Authorized
+analytics/competitor sync remains an explicit action at this stage.
+
 ## Storyboard contract
 
 See [examples/ai-system-visualization.json](examples/ai-system-visualization.json) and [examples/ai-agent-broke-rules.json](examples/ai-agent-broke-rules.json). Important fields include:
