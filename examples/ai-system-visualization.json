@@ -1,0 +1,65 @@
+{
+  "specification_version": "2.0",
+  "video_id": "ai-system-visualization",
+  "series": "inside_the_machine",
+  "title": "AI System Visualization",
+  "platform": "youtube_shorts",
+  "aspect_ratio": "9:16",
+  "fps": 30,
+  "narration_voice": "david",
+  "narration_script": "A developer asks an AI system a question. The model router selects the right path. Context and tools feed the model. A grounded response returns to the user.",
+  "caption_timing": "estimated",
+  "scenes": [
+    {
+      "scene_id": "query-arrives",
+      "scene_type": "data_flow",
+      "narration_text": "A developer asks an AI system a question.",
+      "headline": "A QUESTION ENTERS THE SYSTEM",
+      "supporting_text": "Every useful answer starts with a well-routed request.",
+      "duration_seconds": 2.5,
+      "visual_properties": {},
+      "asset_references": [],
+      "animation_properties": {"camera": "push_in"},
+      "transition": "focus"
+    },
+    {
+      "scene_id": "model-routing",
+      "scene_type": "architecture",
+      "narration_text": "The model router selects the right path. Context and tools feed the model.",
+      "headline": "ROUTE WITH INTENT",
+      "supporting_text": "Policy, model selection, context, and tools work as one system.",
+      "duration_seconds": 4.5,
+      "visual_properties": {},
+      "asset_references": [],
+      "animation_properties": {"packet": "cyan"},
+      "transition": "fade"
+    },
+    {
+      "scene_id": "grounded-response",
+      "scene_type": "lesson",
+      "narration_text": "A grounded response returns to the user.",
+      "headline": "GROUND THE RESPONSE",
+      "supporting_text": "Reliable systems make each step visible and measurable.",
+      "duration_seconds": 2.5,
+      "visual_properties": {"recommendation": "observability"},
+      "asset_references": [],
+      "animation_properties": {},
+      "transition": "fade"
+    }
+  ],
+  "media_assets": [],
+  "source_references": [],
+  "fictional": false,
+  "thumbnail_details": {
+    "variant": "technical",
+    "headline": "HOW AI ROUTING WORKS",
+    "supporting_text": "QUERY / ROUTER / RESPONSE"
+  },
+  "metadata": {
+    "caption": "Your AI app is more than one prompt. Watch a request move through routing, context, tools, and a grounded response. Build systems. Not demos.\n\nFollow Build AI With Dinesh for practical AI engineering.\n\n#AIEngineering #LLM #AIAgents",
+    "youtube_description": "A short visual explanation of a request flowing through an AI model router, context, tools, and a grounded response.",
+    "tags": ["AI engineering", "LLM routing", "AI systems", "model router"],
+    "hashtags": ["#AIEngineering", "#LLM", "#AIAgents"],
+    "cta": "Follow Build AI With Dinesh for practical AI engineering."
+  }
+}

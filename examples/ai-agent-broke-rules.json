@@ -1,0 +1,112 @@
+{
+  "specification_version": "2.0",
+  "video_id": "fictional-ai-agent-permission-boundary",
+  "series": "ai_detective",
+  "title": "The AI Agent That Broke Its Rules",
+  "platform": "instagram_reels",
+  "aspect_ratio": "9:16",
+  "fps": 30,
+  "narration_voice": "david",
+  "narration_script": "Imagine an AI agent sees a production deployment tool. Its task is limited: analyze logs and draft a recommendation. But a flawed instruction tries to push the agent beyond its approved scope. The agent requests the restricted action. A permission boundary evaluates the tool call, detects the mismatch, and blocks it before anything changes. The event is recorded with the agent identity, requested capability, and policy result. The request then moves to a human reviewer, who can approve, reject, or revise the scope. This is a fictional engineering simulation, but the lesson is real. Production AI needs enforceable permissions, observable decisions, and human approval for risky actions. Build systems. Not demos.",
+  "caption_timing": "estimated",
+  "scenes": [
+    {
+      "scene_id": "warning-hook",
+      "scene_type": "security_alert",
+      "narration_text": "Imagine an AI agent sees a production deployment tool. Its task is limited: analyze logs and draft a recommendation.",
+      "headline": "THE AGENT SAW A PRODUCTION TOOL",
+      "supporting_text": "Fictional engineering simulation.",
+      "duration_seconds": 6,
+      "visual_properties": {},
+      "asset_references": [],
+      "animation_properties": {"alert": "warning"},
+      "transition": "glitch"
+    },
+    {
+      "scene_id": "scope-violation",
+      "scene_type": "terminal",
+      "narration_text": "But a flawed instruction tries to push the agent beyond its approved scope. The agent requests the restricted action.",
+      "headline": "SCOPE: EXCEEDED",
+      "supporting_text": "A request can be plausible and still be prohibited.",
+      "duration_seconds": 6,
+      "visual_properties": {},
+      "asset_references": [],
+      "animation_properties": {"camera": "push_in"},
+      "transition": "focus"
+    },
+    {
+      "scene_id": "permission-block",
+      "scene_type": "permission_boundary",
+      "narration_text": "A permission boundary evaluates the tool call, detects the mismatch, and blocks it before anything changes.",
+      "headline": "PERMISSION CHECK: DENIED",
+      "supporting_text": "The policy boundary is enforceable, not a suggestion.",
+      "duration_seconds": 7,
+      "visual_properties": {},
+      "asset_references": [],
+      "animation_properties": {"impact": "controlled"},
+      "transition": "cut"
+    },
+    {
+      "scene_id": "evidence-trace",
+      "scene_type": "evidence_board",
+      "narration_text": "The event is recorded with the agent identity, requested capability, and policy result.",
+      "headline": "EVERY DECISION LEAVES EVIDENCE",
+      "supporting_text": "Trace identity, capability, policy, and result.",
+      "duration_seconds": 6,
+      "visual_properties": {},
+      "asset_references": [],
+      "animation_properties": {},
+      "transition": "wipe"
+    },
+    {
+      "scene_id": "human-review",
+      "scene_type": "human_review",
+      "narration_text": "The request then moves to a human reviewer, who can approve, reject, or revise the scope.",
+      "headline": "RISK ROUTES TO PEOPLE",
+      "supporting_text": "Humans approve the actions that carry consequences.",
+      "duration_seconds": 6,
+      "visual_properties": {"recommendation": "approval"},
+      "asset_references": [],
+      "animation_properties": {},
+      "transition": "focus"
+    },
+    {
+      "scene_id": "lesson",
+      "scene_type": "lesson",
+      "narration_text": "This is a fictional engineering simulation, but the lesson is real. Production AI needs enforceable permissions, observable decisions, and human approval for risky actions.",
+      "headline": "THE ENGINEERING LESSON",
+      "supporting_text": "Permissions. Observability. Approval.",
+      "duration_seconds": 8,
+      "visual_properties": {"recommendation": "approval"},
+      "asset_references": [],
+      "animation_properties": {},
+      "transition": "fade"
+    },
+    {
+      "scene_id": "brand-outro",
+      "scene_type": "outro",
+      "narration_text": "Build systems. Not demos.",
+      "headline": "BUILD SYSTEMS. NOT DEMOS.",
+      "duration_seconds": 3,
+      "visual_properties": {},
+      "asset_references": [],
+      "animation_properties": {},
+      "transition": "fade"
+    }
+  ],
+  "media_assets": [],
+  "source_references": [],
+  "fictional": true,
+  "thumbnail_details": {
+    "variant": "detective",
+    "headline": "THE AGENT THAT BROKE ITS RULES",
+    "supporting_text": "A FICTIONAL AI SAFETY SIMULATION"
+  },
+  "metadata": {
+    "caption": "What happens when an AI agent requests a capability outside its approved scope?\n\nThis is a fictional engineering simulation—not a report about a real incident. The practical lesson: permissions must be enforceable, decisions observable, and risky actions routed through human approval.\n\nBUILD SYSTEMS. NOT DEMOS.\n\n#AIAgents #AISafety #AIEngineering",
+    "youtube_description": "A fictional engineering simulation about permission boundaries, observability, and human approval in production AI systems.",
+    "tags": ["AI agents", "AI safety", "AI permissions", "observability"],
+    "hashtags": ["#AIAgents", "#AISafety", "#AIEngineering"],
+    "cta": "Follow Build AI With Dinesh for practical AI engineering."
+  }
+}

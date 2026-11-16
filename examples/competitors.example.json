@@ -1,0 +1,12 @@
+{
+  "competitors": [
+    {
+      "platform": "youtube",
+      "handle": "@examplechannel"
+    },
+    {
+      "platform": "instagram",
+      "handle": "examplecreator"
+    }
+  ]
+}

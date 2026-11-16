@@ -1,0 +1,13 @@
+# Local social performance data and credentials
+data/
+research/
+.env
+
+# Generated production assets
+output/
+.work/
+remotion/public/jobs/
+
+# Tool caches
+__pycache__/
+*.pyc
